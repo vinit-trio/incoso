@@ -11,12 +11,12 @@
     <meta name="description"
         content="Strukturierter Trade-Finance-Partner für physische Warenströme. Klare Governance, strikte Risikodiszplin und transaktionsbasierte Finanzierung.">
 
-    <title>Incoso</title>
+    <title>Incoso - Auf einen Blick</title>
 
     <script defer src="assets/js/alpine.js"></script>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/fonts.css">
@@ -35,7 +35,7 @@
     <header x-data="{ open: false }" @keydown.escape.window="open = false" class="h-(--header-size) bg-white">
         <div class="flex">
             <div>
-                <button aria-label="Menü-Umschalter" @click="open = !open" class="bg-green p-20 lg:p-35 relative">
+                <button @click="open = !open" class="bg-green p-20 lg:p-35 relative">
                     <img src="assets/images/menu-icon.svg" alt="" :class="open && 'opacity-0 rotate-45'"
                         class="trans_slow">
                     <img src="assets/images/cross-icon.svg" alt="" :class="open ? '' : 'opacity-0 -rotate-45'"
@@ -139,7 +139,7 @@
                 </nav>
             </div>
             <div x-data="{ open: false }">
-                <button aria-label="Suchleiste" class="bg-black p-20 lg:p-35" @click="open = true">
+                <button class="bg-black p-20 lg:p-35" @click="open = true">
                     <img src="assets/images/search-icon.svg" alt="">
                 </button>
                 <!-- Overlay -->
@@ -148,8 +148,7 @@
                     <!-- Modal -->
                     <div class="bg-white p-24 w-full max-w-xsm">
                         <h2 class="text-lg font-semibold mb-2">Search</h2>
-                        <input id="search" name="search" type="search" placeholder="Search..."
-                            class="w-full p-8 border border-gray-300">
+                        <input type="search" placeholder="Search..." class="w-full p-8 border border-gray-300">
                     </div>
                 </div>
             </div>
@@ -164,39 +163,63 @@
         </section>
         <section class="pb-spc">
             <div class="container">
-                <div class="title">
-                    <h2>
-                        Unser Ansatz
-                    </h2>
+                <ul class="breadcrumb flex mb-17 xl:mb-34">
+                    <li class="group pr-14 flex items-center gap-14">
+                        <a href="index.html" class="group-last:bg-gray py-2 group-last:px-11 rounded">Incoso</a>
+                        <svg class="group-last:hidden" width="7" height="14" viewBox="0 0 7 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.19811 0.0239856C0.947105 -0.0260145 0.677905 -0.00401448 0.448105 0.148986C-0.0113959 0.455987 -0.139496 1.09599 0.166805 1.555C2.36196 4.84803 2.36196 9.13796 0.166805 12.431C-0.139496 12.89 -0.0113959 13.53 0.448105 13.837C0.907605 14.143 1.54801 14.015 1.85441 13.555L5.85441 7.55501C6.07831 7.22001 6.07831 6.76599 5.85441 6.43098L1.85441 0.430969C1.70121 0.200968 1.44901 0.0739857 1.19811 0.0239856Z"
+                                fill="black" />
+                        </svg>
+                    </li>
+                    <li class="group pr-14 flex items-center gap-14">
+                        <a href="wer-wir-sind.html" class="group-last:bg-gray py-2 group-last:px-11 rounded">Wer wir
+                            sind </a>
+                        <svg class="group-last:hidden" width="7" height="14" viewBox="0 0 7 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.19811 0.0239856C0.947105 -0.0260145 0.677905 -0.00401448 0.448105 0.148986C-0.0113959 0.455987 -0.139496 1.09599 0.166805 1.555C2.36196 4.84803 2.36196 9.13796 0.166805 12.431C-0.139496 12.89 -0.0113959 13.53 0.448105 13.837C0.907605 14.143 1.54801 14.015 1.85441 13.555L5.85441 7.55501C6.07831 7.22001 6.07831 6.76599 5.85441 6.43098L1.85441 0.430969C1.70121 0.200968 1.44901 0.0739857 1.19811 0.0239856Z"
+                                fill="black" />
+                        </svg>
+                    </li>
+                    <li class="group pr-14 flex items-center gap-14">
+                        <a href="auf-einen-blick.html" class="group-last:bg-gray py-2 group-last:px-11 rounded">Auf
+                            einen Blick</a>
+                        <svg class="group-last:hidden" width="7" height="14" viewBox="0 0 7 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.19811 0.0239856C0.947105 -0.0260145 0.677905 -0.00401448 0.448105 0.148986C-0.0113959 0.455987 -0.139496 1.09599 0.166805 1.555C2.36196 4.84803 2.36196 9.13796 0.166805 12.431C-0.139496 12.89 -0.0113959 13.53 0.448105 13.837C0.907605 14.143 1.54801 14.015 1.85441 13.555L5.85441 7.55501C6.07831 7.22001 6.07831 6.76599 5.85441 6.43098L1.85441 0.430969C1.70121 0.200968 1.44901 0.0739857 1.19811 0.0239856Z"
+                                fill="black" />
+                        </svg>
+                    </li>
+                </ul>
+                <h2 class="text-22 font-inter font-extrabold mb-17 xl:mb-34">
+                    WER WIR SIND
+                </h2>
+                <h3 class="text-38 font-semibold mb-17 xl:mb-34">
+                    Auf einen Blick
+                </h3>
+                <div class="text max-w-950 mb-14 xl:mb-28 font-inter text-22">
                     <p>
-                        Wir agieren als strukturierter Trade-Finance-Partner für physische Warenströme, mit klarer
-                        Governance und Risikodisziplin.
+                        Incoso Plc ist ein spezialisierter Anbieter von Trade-Finance-Lösungen mit Sitz im Vereinigten
+                        Königreich.
+                    </p>
+                    <p>
+                        Wir stellen kurzfristige, transaktionsbezogene Finanzierung für reale Handelsgeschäfte
+                        bereit, bei denen Lieferung, Zahlung und Risiko zeitlich auseinanderfallen.
                     </p>
                 </div>
-                <div class="h_card flex flex-col md:flex-row bg-light">
-                    <div class="md:w-1/2 p-20 lg:p-60 flex flex-col justify-center">
-                        <h2 class="text-38 font-semibold pb-20 xl:pb-40 underlined">
-                            Wer wir sind
-                        </h2>
-                        <div class="text mb-18 xl:mb-36">
-                            <p>
-                                Wir sind ein spezialisierter Anbieter von Trade-Finance-Lösungen für physische
-                                Commodities.
-                            </p>
-                            <p>
-                                Durch unsere transaktionsbezogene Finanzierung unterstützen wir den strukturierten und
-                                verantwortungsvollen Fluss von Waren, die eine zentrale Rolle in industriellen und
-                                wirtschaftlichen Wertschöpfungsketten spielen.
-                            </p>
-                        </div>
-                        <a href="#" class="flex items-center gap-8">
-                            <span>Find out more</span>
-                            <img src="assets/images/right-arrow-icon.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="md:w-1/2 aspect-[1.17/1] relative min-h-full max-w-full">
-                        <img src="assets/images/wws-image.webp" class="absolute size-full object-cover" alt="">
-                    </div>
+                <div class="text max-w-950">
+                    <p>
+                        Gegründet mit dem klaren Fokus auf strukturierte Handelsfinanzierung, agiert Incoso Plc heute
+                        als disziplinierter Kapitalgeber für ausgewählte Handelsströme, insbesondere bei Maschinen,
+                        Industrie-Equipment sowie hochstandardisierten Bulk-Commodities mit kurzen Zyklen.
+                    </p>
+                    <p>
+                        Unsere Tätigkeit ist nicht operativ.Wir produzieren, handeln, lagern oder vertreiben keine
+                        Waren.Unsere Rolle ist finanziell und strukturell.
+                    </p>
                 </div>
             </div>
         </section>
@@ -204,173 +227,47 @@
             <div class="container">
                 <div class="title">
                     <h2>
-                        Latest news
+                        Was wir tun
                     </h2>
                 </div>
-                <div class="latest_news grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-14 text-sm">
-                    <div class="bg-light px-17 py-32 flex flex-col gap-12">
-                        <span class="text-xs">
-                            07.12.2025
-                        </span>
-                        <h3 class="font-semibold">
-                            Small- und Mid-Market-Buyouts: 10 strukturelle und zyklische Rückenwinde - und wie Sie
-                            erfolgreich investieren
-                        </h3>
-                        <a href="#">
-                            Mehr erfahren
-                        </a>
-                    </div>
-                    <div class="bg-light px-17 py-32 flex flex-col gap-12">
-                        <span class="text-xs">
-                            07.12.2025
-                        </span>
-                        <h3 class="font-semibold">
-                            Small- und Mid-Market-Buyouts: 10 strukturelle und zyklische Rückenwinde - und wie Sie
-                            erfolgreich investieren
-                        </h3>
-                        <a href="#">
-                            Mehr erfahren
-                        </a>
-                    </div>
-                    <div class="bg-light px-17 py-32 flex flex-col gap-12">
-                        <span class="text-xs">
-                            07.12.2025
-                        </span>
-                        <h3 class="font-semibold">
-                            Small- und Mid-Market-Buyouts: 10 strukturelle und zyklische Rückenwinde - und wie Sie
-                            erfolgreich investieren
-                        </h3>
-                        <a href="#">
-                            Mehr erfahren
-                        </a>
-                    </div>
-                    <div class="bg-light px-17 py-32 flex flex-col gap-12">
-                        <span class="text-xs">
-                            07.12.2025
-                        </span>
-                        <h3 class="font-semibold">
-                            Small- und Mid-Market-Buyouts: 10 strukturelle und zyklische Rückenwinde - und wie Sie
-                            erfolgreich investieren
-                        </h3>
-                        <a href="#">
-                            Mehr erfahren
-                        </a>
-                    </div>
-                    <div class="bg-light px-17 py-32 flex flex-col gap-12">
-                        <span class="text-xs">
-                            07.12.2025
-                        </span>
-                        <h3 class="font-semibold">
-                            Small- und Mid-Market-Buyouts: 10 strukturelle und zyklische Rückenwinde - und wie Sie
-                            erfolgreich investieren
-                        </h3>
-                        <a href="#">
-                            Mehr erfahren
-                        </a>
-                    </div>
-                </div>
-                <a href="#" class="mt-40 inline-block underline">
-                    Alle Insights Artikel
-                </a>
-            </div>
-        </section>
-        <section class="pb-spc">
-            <div class="container">
-                <div class="title">
-                    <h2>
-                        Unsere Commodities
-                    </h2>
-                </div>
-                <div class="h_card flex flex-col md:flex-row bg-light reverse">
-                    <div class="md:w-1/2 p-20 lg:p-60 flex flex-col justify-center">
-                        <h2 class="text-38 font-semibold pb-20 xl:pb-40">
-                            Wir unterstützen den Rohstoffefluss
-                        </h2>
-                        <div class="text mb-18 xl:mb-36">
-                            <p>
-                                Wir finanzieren Handelsgeschäfte mit physischen, marktfähigen Commodities, die eine
-                                zentrale Rolle in industriellen Wertschöpfungsketten und im globalen Warenhandel
-                                spielen.
-                                <br>
-                                Unsere Trade-Finance-Lösungen unterstützen den strukturierten Fluss dieser
-                                Waren entlang klar definierter Liefer-, Vertrags- und Zahlungsstrukturen.
-                            </p>
+                <div class="latest_news grid md:grid-cols-2 gap-14 lg:gap-40 xl:gap-80 text-white">
+                    <div
+                        class="relative z-1 bg-light rounded-[14px] overflow-hidden flex flex-col p-20 xsm:p-40 xl:px-75 xl:py-130">
+                        <div class="img absolute -z-2 inset-0">
+                            <img class="size-full object-cover" src="assets/images/wwt-img-1.webp" alt="">
                         </div>
-                        <a href="#" class="flex items-center gap-8">
-                            <span>Find out more</span>
-                            <img src="assets/images/right-arrow-icon.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="md:w-1/2 aspect-[1.17/1] relative min-h-full max-w-full">
-                        <img src="assets/images/uc-image.webp" class="absolute size-full object-cover" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="pb-spc">
-            <div class="container">
-                <div class="title">
-                    <h2>
-                        Unser Umgang mit Klimarisiken
-                    </h2>
-                </div>
-                <div class="h_card flex flex-col md:flex-row bg-light">
-                    <div class="md:w-1/2 p-20 lg:p-60 flex flex-col justify-center">
-                        <div class="text mb-18 xl:mb-36">
-                            <p>
-                                Incoso erkennt an, dass der Übergang zu einer kohlenstoffärmeren Wirtschaft Auswirkungen
-                                auf Warenströme, Handelsstrukturen und Finanzierungsrisiken hat.
-                            </p>
-                            <p>
-                                Unsere Rolle besteht dabei nicht in der operativen Steuerung von Produktions- oder
-                                Emissionspfaden, sondern in der verantwortungsvollen Strukturierung von
-                                Trade-Finance-Transaktionen.
-                            </p>
-                            <p>Klimabezogene Aspekte werden von uns ausschließlich als Risikodimension betrachtet und
-                                fließen in die Transaktionsprüfung, Strukturierung und Entscheidungsfindung ein.
-
-                            </p>
-                            <p>
-                                Wir finanzieren keine Produktion, kein Sourcing und keinen Vertrieb von Rohstoffen,
-                                sondern transaktionsbezogene Warenbewegungen, deren Struktur klar definiert,
-                                dokumentiert und kontrollierbar ist.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 aspect-[1.17/1] relative min-h-full max-w-full">
-                        <img src="assets/images/uumk-image.webp" class="absolute size-full object-cover" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="pb-spc">
-            <div class="container">
-                <div class="title">
-                    <h2>
-                        Unsere Kultur
-                    </h2>
-                </div>
-                <div class="h_card flex flex-col md:flex-row bg-light">
-                    <div class="md:w-1/2">
-                        <img src="assets/images/kv-image.webp" class="w-full" alt="">
-                        <div class="p-20 lg:p-35">
-                            <h3 class="text-22 font-extrabold font-inter mb-18 xl:mb-38">
-                                Karrieren voranbringen
-                            </h3>
-                            <a href="#" class="flex items-center gap-8">
-                                <span>Find out more</span>
-                                <img src="assets/images/right-arrow-icon.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="md:w-1/2 p-20 lg:p-35 flex flex-col justify-between">
-                        <h3 class="text-22 font-extrabold font-inter mb-18 xl:mb-38">
-                            Karrieren voranbringen
+                        <h3 class="text-22 font-extrabold font-inter mb-9 xl:mb-18">
+                            Maschinen & Industrieanlagen
                         </h3>
-                        <a href="#" class="flex items-center gap-8">
-                            <span>Find out more</span>
-                            <img src="assets/images/right-arrow-icon.svg" alt="">
+                        <p class="mb-20 xl:mb-40 text-18">
+                            Wir stellen Trade-Finance-Lösungen für die Lieferung von Maschinen, Anlagen und
+                            industriellem Equipment bereit, insbesondere zur Überbrückung von Zahlungszielen von 30
+                            bis 90 Tagen.
+                        </p>
+                        <a href="#" class="flex items-center gap-8 font-bold">
+                            <span>Mehr Erfahren</span>
+                            <img src="assets/images/right-arrow-icon.svg" alt="" class="invert">
                         </a>
+                        <div class="overlay -z-1 absolute inset-0 bg-black/50"></div>
+                    </div>
+                    <div
+                        class="relative z-1 bg-light rounded-[14px] overflow-hidden flex flex-col p-20 xsm:p-40 xl:px-75 xl:py-130">
+                        <div class="img absolute -z-2 inset-0">
+                            <img class="size-full object-cover" src="assets/images/wwt-img-2.webp" alt="">
+                        </div>
+                        <h3 class="text-22 font-extrabold font-inter mb-9 xl:mb-18">
+                            Maschinen & Industrieanlagen
+                        </h3>
+                        <p class="mb-20 xl:mb-40 text-18">
+                            Wir stellen Trade-Finance-Lösungen für die Lieferung von Maschinen, Anlagen und
+                            industriellem Equipment bereit, insbesondere zur Überbrückung von Zahlungszielen von 30
+                            bis 90 Tagen.
+                        </p>
+                        <a href="#" class="flex items-center gap-8 font-bold">
+                            <span>Mehr Erfahren</span>
+                            <img src="assets/images/right-arrow-icon.svg" alt="" class="invert">
+                        </a>
+                        <div class="overlay -z-1 absolute inset-0 bg-black/50"></div>
                     </div>
                 </div>
             </div>
@@ -384,7 +281,7 @@
                 </div>
                 <div class="latest_news grid md:grid-cols-2 lg:grid-cols-3 gap-14 xl:gap-35 text-xs">
                     <div class="bg-light rounded-[14px] overflow-hidden flex flex-col">
-                        <a href="#" class="img" aria-label="Neueste Nachrichten 1">
+                        <a href="#" class="img">
                             <img class="w-full" src="assets/images/ln-img-1.webp" alt="">
                         </a>
                         <div class="px-20 py-28 flex flex-col gap-9 grow">
@@ -401,7 +298,7 @@
                         </div>
                     </div>
                     <div class="bg-light rounded-[14px] overflow-hidden flex flex-col">
-                        <a href="#" class="img" aria-label="Neueste Nachrichten 2">
+                        <a href="#" class="img">
                             <img class="w-full" src="assets/images/ln-img-2.webp" alt="">
                         </a>
                         <div class="px-20 py-28 flex flex-col gap-9 grow">
@@ -417,7 +314,7 @@
                         </div>
                     </div>
                     <div class="bg-light rounded-[14px] overflow-hidden flex flex-col">
-                        <a href="#" class="img" aria-label="Neueste Nachrichten 3">
+                        <a href="#" class="img">
                             <img class="w-full" src="assets/images/ln-img-3.webp" alt="">
                         </a>
                         <div class="px-20 py-28 flex flex-col gap-9 grow">
@@ -456,14 +353,10 @@
                 <h2 class="text-18 font-semibold mb-13 xl:mb-26">
                     Folgen Sie uns
                 </h2>
-                <div class="flex items-center gap-25">
-                    <a aria-label="x-Konto" href="https://x.com/" target="_blank">
-                        <img src="assets/images/twitter.svg" alt="">
-                    </a>
-                    <a aria-label="linkedin-Konto" href="https://in.linkedin.com/" target="_blank">
-                        <img src="assets/images/linkedin.svg" alt="">
-                    </a>
-                </div>
+                <a href="#" class="flex items-center gap-25">
+                    <img src="assets/images/twitter.svg" alt="">
+                    <img src="assets/images/linkedin.svg" alt="">
+                </a>
             </div>
         </div>
         <hr class="border-stroke my-25 xl:my-50">
