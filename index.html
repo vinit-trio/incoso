@@ -55,6 +55,7 @@
                                 </a>
                                 <button>
                                     <img src="assets/images/right-icon-2.svg" class="p-6" alt="">
+                                    <span class="sr-only">Zum Menü gehen</span>
                                 </button>
                             </div>
                             <div @click.outside="open = false" x-show="open"
@@ -75,6 +76,7 @@
                                             </a>
                                             <button>
                                                 <img src="assets/images/right-icon-2.svg" class="p-6" alt="">
+                                                <span class="sr-only">Zum Menü gehen</span>
                                             </button>
                                         </div>
                                         <div @click.outside="open = false" x-show="open"
@@ -148,6 +150,7 @@
                     <!-- Modal -->
                     <div class="bg-white p-24 w-full max-w-xsm">
                         <h2 class="text-lg font-semibold mb-2">Search</h2>
+                        <label for="search" class="sr-only">Suchleiste</label>
                         <input id="search" name="search" type="search" placeholder="Search..."
                             class="w-full p-8 border border-gray-300">
                     </div>
@@ -165,9 +168,9 @@
         <section class="pb-spc">
             <div class="container">
                 <div class="title">
-                    <h2>
+                    <h1>
                         Unser Ansatz
-                    </h2>
+                    </h1>
                     <p>
                         Wir agieren als strukturierter Trade-Finance-Partner für physische Warenströme, mit klarer
                         Governance und Risikodisziplin.
@@ -522,6 +525,9 @@
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M6 15l6 -6l6 6" />
         </svg>
+        <span class="sr-only">
+            Zurück nach oben
+        </span>
     </button>
 
     <!-- JS -->
