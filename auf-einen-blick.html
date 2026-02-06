@@ -35,7 +35,7 @@
     <header x-data="{ open: false }" @keydown.escape.window="open = false" class="h-(--header-size) bg-white">
         <div class="flex">
             <div>
-                <button @click="open = !open" class="bg-green p-20 lg:p-35 relative">
+                <button aria-label="Menü-Umschalter" @click="open = !open" class="bg-green p-20 lg:p-35 relative">
                     <img src="assets/images/menu-icon.svg" alt="" :class="open && 'opacity-0 rotate-45'"
                         class="trans_slow">
                     <img src="assets/images/cross-icon.svg" alt="" :class="open ? '' : 'opacity-0 -rotate-45'"
@@ -55,6 +55,7 @@
                                 </a>
                                 <button>
                                     <img src="assets/images/right-icon-2.svg" class="p-6" alt="">
+                                    <span class="sr-only">Zum Menü gehen</span>
                                 </button>
                             </div>
                             <div @click.outside="open = false" x-show="open"
@@ -75,6 +76,7 @@
                                             </a>
                                             <button>
                                                 <img src="assets/images/right-icon-2.svg" class="p-6" alt="">
+                                                <span class="sr-only">Zum Menü gehen</span>
                                             </button>
                                         </div>
                                         <div @click.outside="open = false" x-show="open"
@@ -139,7 +141,7 @@
                 </nav>
             </div>
             <div x-data="{ open: false }">
-                <button class="bg-black p-20 lg:p-35" @click="open = true">
+                <button aria-label="Suchleiste" class="bg-black p-20 lg:p-35" @click="open = true">
                     <img src="assets/images/search-icon.svg" alt="">
                 </button>
                 <!-- Overlay -->
@@ -148,7 +150,9 @@
                     <!-- Modal -->
                     <div class="bg-white p-24 w-full max-w-xsm">
                         <h2 class="text-lg font-semibold mb-2">Search</h2>
-                        <input type="search" placeholder="Search..." class="w-full p-8 border border-gray-300">
+                        <label for="search" class="sr-only">Suchleiste</label>
+                        <input id="search" name="search" type="search" placeholder="Search..."
+                            class="w-full p-8 border border-gray-300">
                     </div>
                 </div>
             </div>
@@ -156,7 +160,7 @@
     </header>
 
     <main id="main-content">
-        <section class="mb-spc relative z-1 lg:min-h-[calc(100dvh-100px)] flex items-center py-150">
+        <section class="mb-spc relative z-1 lg:min-h-[calc(100dvh-100px)] flex items-center py-150  bg-black">
             <div class="absolute inset-0 -z-1">
                 <img src="assets/images/hero-bg.webp" class="size-full object-cover" alt="">
             </div>
@@ -165,7 +169,7 @@
             <div class="container">
                 <ul class="breadcrumb flex mb-17 xl:mb-34">
                     <li class="group pr-14 flex items-center gap-14">
-                        <a href="index.html" class="group-last:bg-gray py-2 group-last:px-11 rounded">Incoso</a>
+                        <a href="/" class="group-last:bg-gray py-2 group-last:px-11 rounded">Incoso</a>
                         <svg class="group-last:hidden" width="7" height="14" viewBox="0 0 7 14" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -194,12 +198,12 @@
                         </svg>
                     </li>
                 </ul>
-                <h2 class="text-22 font-inter font-extrabold mb-17 xl:mb-34">
+                <h1 class="text-22 font-inter font-extrabold mb-17 xl:mb-34">
                     WER WIR SIND
                 </h2>
-                <h3 class="text-38 font-semibold mb-17 xl:mb-34">
+                <h2 class="text-38 font-semibold mb-17 xl:mb-34">
                     Auf einen Blick
-                </h3>
+                </h2>
                 <div class="text max-w-950 mb-14 xl:mb-28 font-inter text-22">
                     <p>
                         Incoso Plc ist ein spezialisierter Anbieter von Trade-Finance-Lösungen mit Sitz im Vereinigten
@@ -232,9 +236,10 @@
                 </div>
                 <div class="latest_news grid md:grid-cols-2 gap-14 lg:gap-40 xl:gap-80 text-white">
                     <div
-                        class="relative z-1 bg-light rounded-[14px] overflow-hidden flex flex-col p-20 xsm:p-40 xl:px-75 xl:py-130">
+                        class="relative z-1 bg-black rounded-[14px] overflow-hidden flex flex-col p-20 xsm:p-40 xl:px-75 xl:py-130">
                         <div class="img absolute -z-2 inset-0">
-                            <img class="size-full object-cover" src="assets/images/wwt-img-1.webp" alt="">
+                            <img class="size-full object-cover" src="assets/images/wwt-img-1.webp"
+                                alt="Maschinen & Industrieanlagen">
                         </div>
                         <h3 class="text-22 font-extrabold font-inter mb-9 xl:mb-18">
                             Maschinen & Industrieanlagen
@@ -251,17 +256,17 @@
                         <div class="overlay -z-1 absolute inset-0 bg-black/50"></div>
                     </div>
                     <div
-                        class="relative z-1 bg-light rounded-[14px] overflow-hidden flex flex-col p-20 xsm:p-40 xl:px-75 xl:py-130">
+                        class="relative z-1 bg-black rounded-[14px] overflow-hidden flex flex-col p-20 xsm:p-40 xl:px-75 xl:py-130">
                         <div class="img absolute -z-2 inset-0">
-                            <img class="size-full object-cover" src="assets/images/wwt-img-2.webp" alt="">
+                            <img class="size-full object-cover" src="assets/images/wwt-img-2.webp"
+                                alt="Ausgewählte Bulk-Commodities">
                         </div>
                         <h3 class="text-22 font-extrabold font-inter mb-9 xl:mb-18">
-                            Maschinen & Industrieanlagen
+                            Ausgewählte Bulk-Commodities
                         </h3>
                         <p class="mb-20 xl:mb-40 text-18">
-                            Wir stellen Trade-Finance-Lösungen für die Lieferung von Maschinen, Anlagen und
-                            industriellem Equipment bereit, insbesondere zur Überbrückung von Zahlungszielen von 30
-                            bis 90 Tagen.
+                            Ergänzend finanzieren wir hochstandardisierte, liquide Bulk-Commodities mit etablierten
+                            Handelsstrukturen und kurzen Zyklen.
                         </p>
                         <a href="#" class="flex items-center gap-8 font-bold">
                             <span>Mehr Erfahren</span>
@@ -282,7 +287,7 @@
                 <div class="latest_news grid md:grid-cols-2 lg:grid-cols-3 gap-14 xl:gap-35 text-xs">
                     <div class="bg-light rounded-[14px] overflow-hidden flex flex-col">
                         <a href="#" class="img">
-                            <img class="w-full" src="assets/images/ln-img-1.webp" alt="">
+                            <img class="w-full" src="assets/images/ln-img-1.webp" alt="Small- und Mid-Market-Buyouts">
                         </a>
                         <div class="px-20 py-28 flex flex-col gap-9 grow">
                             <span class="text-xs">
@@ -299,7 +304,7 @@
                     </div>
                     <div class="bg-light rounded-[14px] overflow-hidden flex flex-col">
                         <a href="#" class="img">
-                            <img class="w-full" src="assets/images/ln-img-2.webp" alt="">
+                            <img class="w-full" src="assets/images/ln-img-2.webp" alt="Outlook 2026: Entkopplung">
                         </a>
                         <div class="px-20 py-28 flex flex-col gap-9 grow">
                             <span class="text-xs">
@@ -315,7 +320,7 @@
                     </div>
                     <div class="bg-light rounded-[14px] overflow-hidden flex flex-col">
                         <a href="#" class="img">
-                            <img class="w-full" src="assets/images/ln-img-3.webp" alt="">
+                            <img class="w-full" src="assets/images/ln-img-3.webp" alt="Outlook 2026: Robuste Gewinne">
                         </a>
                         <div class="px-20 py-28 flex flex-col gap-9 grow">
                             <span class="text-xs">
@@ -353,10 +358,14 @@
                 <h2 class="text-18 font-semibold mb-13 xl:mb-26">
                     Folgen Sie uns
                 </h2>
-                <a href="#" class="flex items-center gap-25">
-                    <img src="assets/images/twitter.svg" alt="">
-                    <img src="assets/images/linkedin.svg" alt="">
-                </a>
+                <div class="flex items-center gap-25">
+                    <a aria-label="x-Konto" href="https://x.com/" target="_blank">
+                        <img src="assets/images/twitter.svg" alt="">
+                    </a>
+                    <a aria-label="linkedin-Konto" href="https://in.linkedin.com/" target="_blank">
+                        <img src="assets/images/linkedin.svg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
         <hr class="border-stroke my-25 xl:my-50">
@@ -415,6 +424,9 @@
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M6 15l6 -6l6 6" />
         </svg>
+        <span class="sr-only">
+            Zurück nach oben
+        </span>
     </button>
 
     <!-- JS -->

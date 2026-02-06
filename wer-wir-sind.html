@@ -32,10 +32,11 @@
     </a>
 
     <!-- Header -->
+    <!-- Header -->
     <header x-data="{ open: false }" @keydown.escape.window="open = false" class="h-(--header-size) bg-white">
         <div class="flex">
             <div>
-                <button @click="open = !open" class="bg-green p-20 lg:p-35 relative">
+                <button aria-label="Menü-Umschalter" @click="open = !open" class="bg-green p-20 lg:p-35 relative">
                     <img src="assets/images/menu-icon.svg" alt="" :class="open && 'opacity-0 rotate-45'"
                         class="trans_slow">
                     <img src="assets/images/cross-icon.svg" alt="" :class="open ? '' : 'opacity-0 -rotate-45'"
@@ -55,6 +56,7 @@
                                 </a>
                                 <button>
                                     <img src="assets/images/right-icon-2.svg" class="p-6" alt="">
+                                    <span class="sr-only">Zum Menü gehen</span>
                                 </button>
                             </div>
                             <div @click.outside="open = false" x-show="open"
@@ -75,6 +77,7 @@
                                             </a>
                                             <button>
                                                 <img src="assets/images/right-icon-2.svg" class="p-6" alt="">
+                                                <span class="sr-only">Zum Menü gehen</span>
                                             </button>
                                         </div>
                                         <div @click.outside="open = false" x-show="open"
@@ -139,7 +142,7 @@
                 </nav>
             </div>
             <div x-data="{ open: false }">
-                <button class="bg-black p-20 lg:p-35" @click="open = true">
+                <button aria-label="Suchleiste" class="bg-black p-20 lg:p-35" @click="open = true">
                     <img src="assets/images/search-icon.svg" alt="">
                 </button>
                 <!-- Overlay -->
@@ -148,7 +151,9 @@
                     <!-- Modal -->
                     <div class="bg-white p-24 w-full max-w-xsm">
                         <h2 class="text-lg font-semibold mb-2">Search</h2>
-                        <input type="search" placeholder="Search..." class="w-full p-8 border border-gray-300">
+                        <label for="search" class="sr-only">Suchleiste</label>
+                        <input id="search" name="search" type="search" placeholder="Search..."
+                            class="w-full p-8 border border-gray-300">
                     </div>
                 </div>
             </div>
@@ -156,7 +161,7 @@
     </header>
 
     <main id="main-content">
-        <section class="mb-spc relative z-1 lg:min-h-[calc(100dvh-100px)] flex items-center py-150">
+        <section class="mb-spc relative z-1 lg:min-h-[calc(100dvh-100px)] flex items-center py-150  bg-black">
             <div class="absolute inset-0 -z-1">
                 <img src="assets/images/hero-bg.webp" class="size-full object-cover" alt="">
             </div>
@@ -436,10 +441,14 @@
                 <h2 class="text-18 font-semibold mb-13 xl:mb-26">
                     Folgen Sie uns
                 </h2>
-                <a href="#" class="flex items-center gap-25">
-                    <img src="assets/images/twitter.svg" alt="">
-                    <img src="assets/images/linkedin.svg" alt="">
-                </a>
+                <div class="flex items-center gap-25">
+                    <a aria-label="x-Konto" href="https://x.com/" target="_blank">
+                        <img src="assets/images/twitter.svg" alt="">
+                    </a>
+                    <a aria-label="linkedin-Konto" href="https://in.linkedin.com/" target="_blank">
+                        <img src="assets/images/linkedin.svg" alt="">
+                    </a>
+                </div>
             </div>
         </div>
         <hr class="border-stroke my-25 xl:my-50">
@@ -498,6 +507,9 @@
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M6 15l6 -6l6 6" />
         </svg>
+        <span class="sr-only">
+            Zurück nach oben
+        </span>
     </button>
 
     <!-- JS -->
